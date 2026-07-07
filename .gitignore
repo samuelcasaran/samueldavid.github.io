@@ -1,0 +1,117 @@
+# ============================================
+# AUDIFY - Git Ignore
+# ============================================
+
+# ============================================
+# Archivos del Sistema Operativo
+# ============================================
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# Linux
+*~
+
+# ============================================
+# IDEs y Editores
+# ============================================
+
+# Visual Studio Code
+.vscode/
+*.code-workspace
+
+# PHPStorm / IntelliJ
+.idea/
+*.iml
+
+# Sublime Text
+*.sublime-project
+*.sublime-workspace
+
+# Atom
+.atom/
+
+# ============================================
+# Archivos Temporales
+# ============================================
+
+# Archivos temporales de PHP
+*.tmp
+*.temp
+*.log
+
+# Caché
+cache/
+tmp/
+temp/
+
+# ============================================
+# Configuración Local (NO subir a repositorio)
+# ============================================
+
+# Si tienes configuraciones locales diferentes, descomenta:
+# config.local.php
+
+# ============================================
+# Dependencias (si usas Composer en el futuro)
+# ============================================
+
+vendor/
+composer.lock
+
+# ============================================
+# Archivos de Respaldo
+# ============================================
+
+*.bak
+*.backup
+*.old
+
+# ============================================
+# Archivos HTML Originales (Opcional)
+# ============================================
+
+# Si ya no necesitas los archivos .html originales, descomenta:
+# *.html
+
+# ============================================
+# Uploads / Archivos Generados por Usuarios
+# ============================================
+
+uploads/
+user-content/
+
+# ============================================
+# Archivos Grandes / Assets Opcionales
+# ============================================
+
+# Descomentar si tienes archivos muy grandes que no quieres en Git:
+# *.mp4
+# *.mov
+# *.psd
+# *.ai
+
+# ============================================
+# Node Modules (si usas Node.js para build)
+# ============================================
+
+node_modules/
+npm-debug.log
+yarn-error.log
+package-lock.json
+
+# ============================================
+# Build / Dist
+# ============================================
+
+dist/
+build/
+

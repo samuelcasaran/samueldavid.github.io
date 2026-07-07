@@ -1,0 +1,109 @@
+# ============================================
+# AUDIFY - Configuración Apache
+# ============================================
+# Este archivo hace las URLs más limpias
+# Ejemplo: index.php → index
+# ============================================
+
+# Habilitar RewriteEngine
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteBase /audify/
+
+    # ============================================
+    # URLS LIMPIAS - Quitar .php de las URLs
+    # ============================================
+    
+    # Si el archivo existe, mostrarlo
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteCond %{REQUEST_FILENAME} !-d
+    
+    # Agregar .php si no existe la extensión
+    RewriteCond %{REQUEST_FILENAME}.php -f
+    RewriteRule ^(.+)$ $1.php [L,QSA]
+    
+    # Redirigir de .php a sin extensión (opcional)
+    # RewriteCond %{THE_REQUEST} ^[A-Z]{3,}\s([^.]+)\.php [NC]
+    # RewriteRule ^ %1 [R=301,L]
+</IfModule>
+
+# ============================================
+# SEGURIDAD
+# ============================================
+
+# Prevenir acceso a archivos sensibles
+<FilesMatch "^(config\.php|\.htaccess)$">
+    Order allow,deny
+    Deny from all
+</FilesMatch>
+
+# ============================================
+# COMPRESIÓN GZIP
+# ============================================
+
+<IfModule mod_deflate.c>
+    # Comprimir HTML, CSS, JavaScript, Text, XML y fonts
+    AddOutputFilterByType DEFLATE text/html
+    AddOutputFilterByType DEFLATE text/css
+    AddOutputFilterByType DEFLATE text/javascript
+    AddOutputFilterByType DEFLATE application/javascript
+    AddOutputFilterByType DEFLATE application/x-javascript
+    AddOutputFilterByType DEFLATE text/xml
+    AddOutputFilterByType DEFLATE application/xml
+    AddOutputFilterByType DEFLATE application/xhtml+xml
+    AddOutputFilterByType DEFLATE application/rss+xml
+    AddOutputFilterByType DEFLATE font/opentype
+    AddOutputFilterByType DEFLATE font/ttf
+    AddOutputFilterByType DEFLATE font/eot
+    AddOutputFilterByType DEFLATE font/otf
+</IfModule>
+
+# ============================================
+# CACHÉ DEL NAVEGADOR
+# ============================================
+
+<IfModule mod_expires.c>
+    ExpiresActive On
+    
+    # Imágenes
+    ExpiresByType image/jpg "access plus 1 year"
+    ExpiresByType image/jpeg "access plus 1 year"
+    ExpiresByType image/gif "access plus 1 year"
+    ExpiresByType image/png "access plus 1 year"
+    ExpiresByType image/webp "access plus 1 year"
+    ExpiresByType image/svg+xml "access plus 1 year"
+    
+    # CSS y JavaScript
+    ExpiresByType text/css "access plus 1 month"
+    ExpiresByType application/javascript "access plus 1 month"
+    ExpiresByType text/javascript "access plus 1 month"
+    
+    # Fuentes
+    ExpiresByType font/ttf "access plus 1 year"
+    ExpiresByType font/otf "access plus 1 year"
+    ExpiresByType font/woff "access plus 1 year"
+    ExpiresByType font/woff2 "access plus 1 year"
+    
+    # HTML
+    ExpiresByType text/html "access plus 0 seconds"
+</IfModule>
+
+# ============================================
+# CONFIGURACIÓN PHP (Si es necesario)
+# ============================================
+
+<IfModule mod_php.c>
+    # Habilitar errores en desarrollo (DESACTIVAR EN PRODUCCIÓN)
+    php_flag display_errors Off
+    php_value upload_max_filesize 10M
+    php_value post_max_size 10M
+</IfModule>
+
+# ============================================
+# PÁGINAS DE ERROR PERSONALIZADAS (Opcional)
+# ============================================
+
+# ErrorDocument 404 /audify/404.php
+# ErrorDocument 403 /audify/403.php
+# ErrorDocument 500 /audify/500.php
+

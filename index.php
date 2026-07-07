@@ -1,0 +1,633 @@
+<?php
+$pageTitle = "Samuel Casaran | Diseño y desarrollo de productos digitales";
+$hasFAQ = true; // Para activar el script del FAQ
+include 'components/head.php';
+?>
+
+<?php
+// Cargar configuración si no está cargada
+if (!defined('SITE_NAME')) {
+    $config_path = isset($basePath) ? $basePath . 'config.php' : 'config.php';
+    if (file_exists($config_path)) {
+        require_once $config_path;
+    }
+}
+?>
+
+
+
+<!-- ══════════════════════════════════════════ -->
+<!-- 1. HERO: Propuesta clara + CTA WhatsApp    -->
+<!-- ══════════════════════════════════════════ -->
+<section class="hero fade-in">
+    <div class="hero-blur-orbs">
+        <div class="blur-orb orb-1"></div>
+        <div class="blur-orb orb-2"></div>
+        <div class="blur-orb orb-3"></div>
+        <div class="blur-orb orb-4"></div>
+        <div class="blur-orb orb-5"></div>
+    </div>
+
+    <div class="hero-inner">
+        <!-- Columna Izquierda: Texto -->
+        <div class="hero-text">
+            <div class="hero-badge">
+                <span class="badge-dot"></span>
+                Disponible para nuevos proyectos
+            </div>
+            <p class="hero-kicker">Product Designer &amp; Full-Stack Developer</p>
+            <h1>Diseño y desarrollo software <span class="highlight">funcional</span>.</h1>
+            <p class="hero-sub">
+                Ayudo a emprendedores y negocios a pasar de una idea, Excel, WhatsApp o proceso manual a una primera versión usable, clara y lista para validar.
+            </p>
+            <div class="cta-buttons">
+                <a href="<?php echo get_whatsapp_url('aterrizar'); ?>" class="btn btn-primary">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    Hablar por WhatsApp
+                </a>
+            </div>
+            <div class="hero-stats">
+                <div class="hero-stat">
+                    <span class="stat-num">+20</span>
+                    <span class="stat-label">proyectos entregados</span>
+                </div>
+                <div class="hero-stat-divider"></div>
+                <div class="hero-stat">
+                    <span class="stat-num">4+</span>
+                    <span class="stat-label">años de experiencia</span>
+                </div>
+                <div class="hero-stat-divider"></div>
+                <div class="hero-stat">
+                    <span class="stat-num">100%</span>
+                    <span class="stat-label">clientes satisfechos</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Columna Derecha: Foto de Perfil -->
+        <div class="hero-portrait-col">
+            <div class="portrait-ring-outer">
+                <div class="portrait-ring-inner">
+                    <div class="portrait-glow-bg"></div>
+                    <img
+                        src="<?php echo isset($basePath) ? $basePath : ''; ?>assets/img/perfiles/samuel.png"
+                        alt="Samuel Casaran — Product Designer & Full-Stack Developer"
+                        class="portrait-img"
+                    >
+                </div>
+                <div class="portrait-chip chip-top">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    UI/UX Design
+                </div>
+                <div class="portrait-chip chip-right">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><polyline points="16 18 22 12 16 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><polyline points="8 6 2 12 8 18" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    Full-Stack Dev
+                </div>
+                <div class="portrait-chip chip-bottom">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><rect x="3" y="3" width="18" height="18" rx="2" stroke="currentColor" stroke-width="2"/><path d="M3 9h18M9 21V9" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+                    MVP &amp; SaaS
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ══════════════════════════════════════════ -->
+<!-- 2. TECH STACK BAR (reemplaza marquee)      -->
+<!-- ══════════════════════════════════════════ -->
+<section class="tech-stack-bar">
+    <div class="tech-stack-label">Stack tecnológico</div>
+    <div class="tech-stack-track-wrapper">
+        <div class="tech-stack-track">
+            <!-- Primera pasada -->
+            <div class="tech-item">
+                <svg class="tech-logo" viewBox="0 0 38 57" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h38v10H10v10h28v10H10v10h28v10H10v7H0V0z" fill="#F24E1E"/><path d="M27 47h11v10H27z" fill="#FF7262"/><path d="M27 37h11v10H27z" fill="#A259FF"/><path d="M27 27h11v10H27z" fill="#1ABCFE"/><path d="M27 17h11v10H27z" fill="#0ACF83"/></svg>
+                <span>Figma</span>
+            </div>
+            <div class="tech-item">
+                <svg class="tech-logo" viewBox="0 0 50 52" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M49.626 11.564a.809.809 0 00-.028-.093v-.04a.67.67 0 00-.046-.09l-.01-.015a.747.747 0 00-.065-.086l-.02-.025-.039-.03-.048-.05-24.5-11a.78.78 0 00-.637 0l-24.5 11-.048.05-.038.03-.02.025a.742.742 0 00-.065.086l-.01.015a.67.67 0 00-.046.09v.04a.809.809 0 00-.028.093.707.707 0 00-.02.17v26.67c0 .3.166.578.432.724l24.5 13.71a.787.787 0 00.375.096c.13 0 .26-.033.376-.097l24.5-13.71a.84.84 0 00.43-.723V11.735a.707.707 0 00-.02-.171z" fill="#FF2D20"/><path d="M25 2.22l22.97 10.307L25 22.836 2.03 12.527 25 2.22zM1.643 13.75L24.2 24.44v24.12L1.642 37.87V13.75zm47.272 0V37.87L26.357 48.56V24.44l22.558-10.69z" fill="#fff" fill-opacity=".4"/><path d="M25 2.22L2.03 12.527 25 22.836l22.97-10.309L25 2.22zM1.643 13.75L24.2 24.44v24.12L1.642 37.87V13.75zm47.272 0V37.87L26.357 48.56V24.44l22.558-10.69z" fill="#fff" fill-opacity=".1"/></svg>
+                <span>Laravel</span>
+            </div>
+            <div class="tech-item">
+                <svg class="tech-logo" viewBox="0 0 50 51" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M25 0C11.193 0 0 11.4 0 25.5 0 39.6 11.193 51 25 51c13.806 0 25-11.4 25-25.5C50 11.4 38.806 0 25 0z" fill="#777BB3"/><path d="M40.5 25.5c0 8.56-6.938 15.5-15.5 15.5S9.5 34.06 9.5 25.5 16.438 10 25 10s15.5 6.94 15.5 15.5z" fill="#fff"/><path d="M22.5 20h-8l-1 5h3l-2 10h5l2-10h3l1-5zM35 20h-6c-1.657 0-3 1.343-3 3l-1 5c0 1.657 1.343 3 3 3h3l-.5 2.5h-5L25 35h7c1.657 0 3-1.343 3-3l1.5-7.5-.5-2.5h-1z" fill="#777BB3"/></svg>
+                <span>PHP</span>
+            </div>
+            <div class="tech-item">
+                <svg class="tech-logo" viewBox="0 0 50 44" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M25 3.5L2.5 41h45L25 3.5z" fill="#61DAFB" fill-opacity=".15" stroke="#61DAFB" stroke-width="2"/><circle cx="25" cy="22" r="4" fill="#61DAFB"/><ellipse cx="25" cy="22" rx="20" ry="8" stroke="#61DAFB" stroke-width="2"/><ellipse cx="25" cy="22" rx="20" ry="8" stroke="#61DAFB" stroke-width="2" transform="rotate(60 25 22)"/><ellipse cx="25" cy="22" rx="20" ry="8" stroke="#61DAFB" stroke-width="2" transform="rotate(120 25 22)"/></svg>
+                <span>React</span>
+            </div>
+            <div class="tech-item">
+                <svg class="tech-logo" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="50" height="50" rx="8" fill="#4479A1"/><path d="M25 10c-8.284 0-15 1.79-15 4v4c0 2.21 6.716 4 15 4s15-1.79 15-4v-4c0-2.21-6.716-4-15-4z" fill="#fff"/><path d="M10 18v5c0 2.21 6.716 4 15 4s15-1.79 15-4v-5c-3.527 1.398-9.117 2-15 2s-11.473-.602-15-2z" fill="#fff" fill-opacity=".7"/><path d="M10 27v5c0 2.21 6.716 4 15 4s15-1.79 15-4v-5c-3.527 1.398-9.117 2-15 2s-11.473-.602-15-2z" fill="#fff" fill-opacity=".5"/></svg>
+                <span>MySQL</span>
+            </div>
+            <div class="tech-item">
+                <svg class="tech-logo" viewBox="0 0 50 30" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 9.5L12 1l11 13.5L33 1l16 28.5H1L12 9.5" fill="none" stroke="#06B6D4" stroke-width="2.5" stroke-linejoin="round"/></svg>
+                <span>Tailwind</span>
+            </div>
+            <div class="tech-item">
+                <svg class="tech-logo" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="50" height="50" rx="4" fill="#F7DF1E"/><path d="M13 38l3.4-2.1c.7 1.2 1.3 2.2 2.7 2.2 1.4 0 2.2-.5 2.2-2.6V22h4.2v13.6c0 4.3-2.5 6.2-6.2 6.2-3.3 0-5.2-1.7-6.3-3.8zm14.4-.5l3.4-2c.9 1.5 2.1 2.7 4.2 2.7 1.7 0 2.8-.9 2.8-2.1 0-1.5-1.1-2-3-2.8l-1-.4c-3-1.3-5-2.9-5-6.3 0-3.1 2.4-5.5 6.1-5.5 2.6 0 4.5 1 5.8 3.4l-3.3 2.1c-.7-1.3-1.5-1.8-2.6-1.8-1.2 0-1.9.7-1.9 1.8 0 1.2.8 1.7 2.5 2.5l1 .4c3.6 1.5 5.5 3.1 5.5 6.6 0 3.7-2.9 5.8-6.9 5.8-3.8 0-6.3-1.9-7.6-4.4z" fill="#333"/></svg>
+                <span>JavaScript</span>
+            </div>
+            <div class="tech-item">
+                <svg class="tech-logo" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="50" height="50" rx="8" fill="#3ECF8E" fill-opacity=".15"/><rect width="50" height="50" rx="8" stroke="#3ECF8E" stroke-width="1.5"/><path d="M14 35V19l11-6 11 6v16l-11 6-11-6z" stroke="#3ECF8E" stroke-width="2" stroke-linejoin="round"/><path d="M14 19l11 6 11-6M25 25v16" stroke="#3ECF8E" stroke-width="2"/></svg>
+                <span>Node.js</span>
+            </div>
+            <!-- Duplicado para scroll continuo -->
+            <div class="tech-item">
+                <svg class="tech-logo" viewBox="0 0 38 57" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h38v10H10v10h28v10H10v10h28v10H10v7H0V0z" fill="#F24E1E"/><path d="M27 47h11v10H27z" fill="#FF7262"/><path d="M27 37h11v10H27z" fill="#A259FF"/><path d="M27 27h11v10H27z" fill="#1ABCFE"/><path d="M27 17h11v10H27z" fill="#0ACF83"/></svg>
+                <span>Figma</span>
+            </div>
+            <div class="tech-item">
+                <svg class="tech-logo" viewBox="0 0 50 52" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M49.626 11.564a.809.809 0 00-.028-.093v-.04a.67.67 0 00-.046-.09l-.01-.015a.747.747 0 00-.065-.086l-.02-.025-.039-.03-.048-.05-24.5-11a.78.78 0 00-.637 0l-24.5 11-.048.05-.038.03-.02.025a.742.742 0 00-.065.086l-.01.015a.67.67 0 00-.046.09v.04a.809.809 0 00-.028.093.707.707 0 00-.02.17v26.67c0 .3.166.578.432.724l24.5 13.71a.787.787 0 00.375.096c.13 0 .26-.033.376-.097l24.5-13.71a.84.84 0 00.43-.723V11.735a.707.707 0 00-.02-.171z" fill="#FF2D20"/></svg>
+                <span>Laravel</span>
+            </div>
+            <div class="tech-item">
+                <svg class="tech-logo" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M25 0C11.193 0 0 11.4 0 25.5 0 39.6 11.193 51 25 51c13.806 0 25-11.4 25-25.5C50 11.4 38.806 0 25 0z" fill="#777BB3"/></svg>
+                <span>PHP</span>
+            </div>
+            <div class="tech-item">
+                <svg class="tech-logo" viewBox="0 0 50 44" fill="none"><circle cx="25" cy="22" r="4" fill="#61DAFB"/><ellipse cx="25" cy="22" rx="20" ry="8" stroke="#61DAFB" stroke-width="2"/><ellipse cx="25" cy="22" rx="20" ry="8" stroke="#61DAFB" stroke-width="2" transform="rotate(60 25 22)"/><ellipse cx="25" cy="22" rx="20" ry="8" stroke="#61DAFB" stroke-width="2" transform="rotate(120 25 22)"/></svg>
+                <span>React</span>
+            </div>
+            <div class="tech-item">
+                <svg class="tech-logo" viewBox="0 0 50 30" fill="none"><path d="M1 9.5L12 1l11 13.5L33 1l16 28.5H1L12 9.5" fill="none" stroke="#06B6D4" stroke-width="2.5" stroke-linejoin="round"/></svg>
+                <span>Tailwind</span>
+            </div>
+            <div class="tech-item">
+                <svg class="tech-logo" viewBox="0 0 50 50" fill="none"><rect width="50" height="50" rx="4" fill="#F7DF1E"/><path d="M13 38l3.4-2.1c.7 1.2 1.3 2.2 2.7 2.2 1.4 0 2.2-.5 2.2-2.6V22h4.2v13.6c0 4.3-2.5 6.2-6.2 6.2-3.3 0-5.2-1.7-6.3-3.8zm14.4-.5l3.4-2c.9 1.5 2.1 2.7 4.2 2.7 1.7 0 2.8-.9 2.8-2.1 0-1.5-1.1-2-3-2.8l-1-.4c-3-1.3-5-2.9-5-6.3 0-3.1 2.4-5.5 6.1-5.5 2.6 0 4.5 1 5.8 3.4l-3.3 2.1c-.7-1.3-1.5-1.8-2.6-1.8-1.2 0-1.9.7-1.9 1.8 0 1.2.8 1.7 2.5 2.5l1 .4c3.6 1.5 5.5 3.1 5.5 6.6 0 3.7-2.9 5.8-6.9 5.8-3.8 0-6.3-1.9-7.6-4.4z" fill="#333"/></svg>
+                <span>JavaScript</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ══════════════════════════════════════════ -->
+<!-- 3. PROBLEMA: Sin criterio se pierden meses -->
+<!-- ══════════════════════════════════════════ -->
+<section class="problem-section">
+    <div class="problem-container">
+        <div class="problem-header">
+            <h2>Construir sin criterio de producto te cuesta meses y dinero</h2>
+            <p>La mayoría de emprendedores pierde tiempo contratando mal, construyendo lo que no importa o esperando meses sin ver resultados.</p>
+        </div>
+        <div class="problem-grid">
+            <div class="problem-col problem-col--bad">
+                <div class="problem-col-label">
+                    <span class="problem-icon">✗</span>
+                    El camino difícil
+                </div>
+                <ul class="problem-list">
+                    <li>Agencias caras sin acceso directo al que desarrolla</li>
+                    <li>3 meses de espera para ver la primera pantalla</li>
+                    <li>Features que nadie pidió ni usa</li>
+                    <li>Cambios bloqueados por contratos y procesos internos</li>
+                    <li>Presupuesto inflado por intermediarios</li>
+                </ul>
+            </div>
+            <div class="problem-divider"></div>
+            <div class="problem-col problem-col--good">
+                <div class="problem-col-label">
+                    <span class="problem-icon problem-icon--good">✓</span>
+                    Trabajar con Samuel Casaran
+                </div>
+                <ul class="problem-list problem-list--good">
+                    <li>Hablas directo con el que diseña Y desarrolla</li>
+                    <li>Priorizamos lo que importa, dejamos lo que no</li>
+                    <li>Primera versión funcional en semanas, no meses</li>
+                    <li>Entregas por sprints: ves el avance en tiempo real</li>
+                    <li>Criterio de producto desde el día 1, no solo código</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ══════════════════════════════════════════ -->
+<!-- 4. ¿EN QUÉ ETAPA ESTÁS? (filtro de leads) -->
+<!-- ══════════════════════════════════════════ -->
+<section class="stages-section">
+    <div class="stages-container">
+        <div class="stages-header">
+            <h2>¿En qué situación estás?</h2>
+            <p>No importa el punto de partida. Lo importante es saber a dónde ir desde ahí.</p>
+        </div>
+        <div class="stages-grid">
+
+            <div class="stage-card">
+                <div class="stage-icon">
+                    <svg width="28" height="28" viewBox="0 0 24 24" fill="none"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </div>
+                <h3>Tengo una idea, pero no sé cómo aterrizarla</h3>
+                <p>Tienes el concepto, el problema que resuelve y quizás el nombre. Pero no sabes qué construir primero, cómo estructurarlo ni qué tan complejo es realmente.</p>
+                <div class="stage-solution-tag">→ Sprint de Producto / MVP</div>
+                <a href="<?php echo get_whatsapp_url('idea_mvp'); ?>" class="stage-cta">Quiero revisar mi caso →</a>
+            </div>
+
+            <div class="stage-card stage-card--featured">
+                <div class="stage-icon">
+                    <svg width="28" height="28" viewBox="0 0 24 24" fill="none"><path d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </div>
+                <h3>Manejo procesos en Excel, WhatsApp o papel</h3>
+                <p>Tienes un negocio que funciona, pero sus procesos son manuales, lentos o difíciles de escalar. Cada vez que crece, el caos crece también.</p>
+                <div class="stage-solution-tag">→ Sistema interno / Dashboard</div>
+                <a href="<?php echo get_whatsapp_url('proceso_manual'); ?>" class="stage-cta">Quiero revisar mi caso →</a>
+            </div>
+
+            <div class="stage-card">
+                <div class="stage-icon">
+                    <svg width="28" height="28" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="1.8"/><path d="M2 12h20M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+                </div>
+                <h3>Tengo una web, pero necesito algo más funcional</h3>
+                <p>Tienes una web informativa o básica, pero ya no alcanza. Necesitas un panel, un sistema de gestión, automatizaciones o una plataforma real.</p>
+                <div class="stage-solution-tag">→ Plataforma / Panel / Automatización</div>
+                <a href="<?php echo get_whatsapp_url('dashboard_plataforma'); ?>" class="stage-cta">Quiero revisar mi caso →</a>
+            </div>
+
+            <div class="stage-card">
+                <div class="stage-icon">
+                    <svg width="28" height="28" viewBox="0 0 24 24" fill="none"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </div>
+                <h3>Quiero validar un SaaS, marketplace o MVP</h3>
+                <p>Tienes una visión de producto más grande: suscripciones, múltiples usuarios, roles, pagos. Necesitas la primera versión que te permita validar el modelo.</p>
+                <div class="stage-solution-tag">→ MVP por fases / SaaS</div>
+                <a href="<?php echo get_whatsapp_url('mvp'); ?>" class="stage-cta">Quiero revisar mi caso →</a>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- ══════════════════════════════════════════ -->
+<!-- 5. PROYECTOS: Mini casos de estudio        -->
+<!-- ══════════════════════════════════════════ -->
+<section class="portfolio" id="portfolio">
+    <div class="portfolio-header">
+        <h2>Productos digitales que construí</h2>
+        <p class="portfolio-header-sub">Proyectos reales con problema real, solución real y resultado medible.</p>
+    </div>
+    <div class="portfolio-carousel-container">
+        <div class="portfolio-carousel-track">
+
+            <!-- Proyecto 1: Wibbux -->
+            <div class="portfolio-item">
+                <div class="portfolio-visual">
+                    <img src="assets/img/portfolio/wibbux.png" alt="Wibbux — Plataforma de catálogos digitales">
+                    <div class="portfolio-type-tag">Web App</div>
+                </div>
+                <div class="portfolio-info">
+                    <h3 class="portfolio-name">Wibbux</h3>
+                    <p class="portfolio-sub">Plataforma de catálogos digitales interactivos</p>
+                    <p class="portfolio-description">
+                        Sistema web que permite a los negocios crear y compartir catálogos digitales interactivos. Diseñé la experiencia de usuario y desarrollé la plataforma funcional para facilitar la digitalización y visualización rápida de productos.
+                    </p>
+                    <div class="portfolio-client">
+                        <img src="assets/img/perfiles/hermin.jpg" alt="Herminson Ledezma" style="width:32px;height:32px;border-radius:50%;object-fit:cover;">
+                        <span>Herminson Ledezma — Cliente</span>
+                    </div>
+                    <a href="https://app.wibbux.com/auth/login" target="_blank" class="portfolio-link" style="margin-top: 1rem;">Visitar sitio web</a>
+                </div>
+            </div>
+
+            <!-- Proyecto 2: Wippy -->
+            <div class="portfolio-item">
+                <div class="portfolio-visual">
+                    <img src="assets/img/portfolio/mesaqr.png" alt="Wippy — SaaS de ventas por WhatsApp">
+                    <div class="portfolio-type-tag">SaaS</div>
+                </div>
+                <div class="portfolio-info">
+                    <h3 class="portfolio-name">Wippy</h3>
+                    <p class="portfolio-sub">SaaS para automatizar ventas y gestión en WhatsApp</p>
+                    <p class="portfolio-description">
+                        Plataforma SaaS que permite a negocios gestionar catálogos y automatizar pedidos recibidos por WhatsApp. Diseñé la experiencia de usuario móvil, el panel de administración web y programé el flujo funcional completo del MVP para su rápida validación comercial.
+                    </p>
+                    <div class="portfolio-client">
+                        <img src="assets/img/perfiles/david.jpg" alt="David Mendoza" style="width:32px;height:32px;border-radius:50%;object-fit:cover;">
+                        <span>David Mendoza — Cliente</span>
+                    </div>
+                    <a href="https://wippy.cl/" target="_blank" class="portfolio-link" style="margin-top: 1rem;">Visitar sitio web</a>
+                </div>
+            </div>
+
+            <!-- Proyecto 3: BlueoPanama -->
+            <div class="portfolio-item">
+                <div class="portfolio-visual">
+                    <img src="assets/img/portfolio/blueo.png" alt="BlueoPanama — Tienda B2B de carcasas">
+                    <div class="portfolio-type-tag">E-commerce</div>
+                </div>
+                <div class="portfolio-info">
+                    <h3 class="portfolio-name">BlueoPanama</h3>
+                    <p class="portfolio-sub">Tienda mayorista B2B para proveedores y negocios</p>
+                    <p class="portfolio-description">
+                        Plataforma de comercio electrónico B2B orientada a proveedores y pequeñas tiendas de accesorios móviles y carcasas. Desarrollé la experiencia de compra rápida, la gestión de inventario al por mayor y el panel de administración integral del negocio.
+                    </p>
+                    <div class="portfolio-client">
+                        <img src="assets/img/perfiles/alejandro.jpg" alt="Alejandro Valencia" style="width:32px;height:32px;border-radius:50%;object-fit:cover;">
+                        <span>Alejandro Valencia — Founder</span>
+                    </div>
+                    <a href="https://www.blueointernational.com/productos" target="_blank" class="portfolio-link" style="margin-top: 1rem;">Visitar sitio web</a>
+                </div>
+            </div>
+
+            <!-- Proyecto 4: Banco BICE / Bancuve -->
+            <div class="portfolio-item">
+                <div class="portfolio-visual">
+                    <img src="assets/img/portfolio/bancuve.png" alt="Bancuve — Plataforma de inversión por custodia">
+                    <div class="portfolio-type-tag">FinTech</div>
+                </div>
+                <div class="portfolio-info">
+                    <h3 class="portfolio-name">Bancuve</h3>
+                    <p class="portfolio-sub">Plataforma financiera de inversión por custodia</p>
+                    <p class="portfolio-description">
+                        Solución FinTech diseñada para la gestión segura e inversión de activos por custodia. Desarrollé el dashboard de inversores, flujos de alta seguridad y una interfaz de usuario enfocada en generar confianza, claridad de datos y control del rendimiento financiero.
+                    </p>
+                    <div class="portfolio-client">
+                        <img src="assets/img/perfiles/Juan.jpg" alt="Juan Cruz" style="width:32px;height:32px;border-radius:50%;object-fit:cover;">
+                        <span>Juan Cruz — Socio</span>
+                    </div>
+                    <a href="https://bancuve.com/" target="_blank" class="portfolio-link" style="margin-top: 1rem;">Visitar sitio web</a>
+                </div>
+            </div>
+
+        </div>
+        <div class="portfolio-carousel-nav">
+            <button class="portfolio-carousel-btn prev-portfolio" onclick="movePortfolio(-1)" title="Anterior">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M15 18L9 12L15 6" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </button>
+            <button class="portfolio-carousel-btn next-portfolio" onclick="movePortfolio(1)" title="Siguiente">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M9 6L15 12L9 18" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </button>
+        </div>
+    </div>
+    <div style="text-align:center;margin-top:3rem;">
+        <p style="color:var(--text-light);margin-bottom:1.2rem;">¿Tienes un proyecto similar o una idea que quieres explorar?</p>
+        <a href="<?php echo get_whatsapp_url('aterrizar'); ?>" class="btn btn-primary">Cuéntame tu caso →</a>
+    </div>
+</section>
+
+<!-- ══════════════════════════════════════════ -->
+<!-- 6. CÓMO TRABAJO: idea → primera versión   -->
+<!-- ══════════════════════════════════════════ -->
+<section class="services" id="servicios">
+    <div class="services-header">
+        <h2>Cómo te llevo de la idea a la primera versión</h2>
+        <span class="services-count">Proceso de Trabajo</span>
+    </div>
+    <div class="services-grid">
+        <div class="service-card branding">
+            <div class="service-content">
+                <div class="service-step-num">01</div>
+                <h3>Diagnóstico y alcance</h3>
+                <p>Definimos el objetivo, las prioridades y qué funciones exactas conforman la primera versión de tu idea.</p>
+            </div>
+        </div>
+        <div class="service-card uxui">
+            <div class="service-content">
+                <div class="service-step-num">02</div>
+                <h3>Prototipo UI/UX</h3>
+                <div class="service-metrics">
+                    <span class="metric">Figma</span>
+                    <span class="metric">Prototipo</span>
+                </div>
+                <p>Diseño pantallas y flujos interactivos. Podrás probarlo con usuarios antes de invertir en código.</p>
+            </div>
+        </div>
+        <div class="service-card development">
+            <div class="service-content">
+                <div class="service-step-num">03</div>
+                <h3>Desarrollo ágil</h3>
+                <p>Construyo la plataforma completa (frontend y backend) entregando avances funcionales semana a semana.</p>
+            </div>
+        </div>
+        <div class="service-card growth">
+            <div class="service-content">
+                <div class="service-step-num">04</div>
+                <h3>Lanzamiento e iteración</h3>
+                <p>Publicamos el producto, analizamos el comportamiento de los primeros usuarios y mejoramos con datos reales.</p>
+            </div>
+        </div>
+    </div>
+    <div style="text-align:center;margin-top:3.5rem;">
+        <a href="<?php echo get_whatsapp_url('aterrizar'); ?>" class="btn btn-primary">Hablemos de tu proyecto</a>
+    </div>
+</section>
+
+
+<!-- ══════════════════════════════════════════ -->
+<!-- 8. SECCIÓN IA: Objeción directa           -->
+<!-- ══════════════════════════════════════════ -->
+<section class="ai-section">
+    <div class="ai-container">
+        <div class="ai-icon">
+            <svg width="48" height="48" viewBox="0 0 24 24" fill="none"><path d="M12 2a10 10 0 100 20A10 10 0 0012 2z" stroke="currentColor" stroke-width="1.5"/><path d="M12 6v6l4 2" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><circle cx="12" cy="12" r="3" fill="currentColor" fill-opacity=".15"/></svg>
+        </div>
+        <div class="ai-content">
+            <p class="ai-eyebrow">Una pregunta frecuente</p>
+            <h2>"¿No puedo hacer esto yo mismo con IA?"</h2>
+            <p class="ai-lead">Sí, puedes. Y la IA es una herramienta que yo mismo uso en cada proyecto.</p>
+            <p class="ai-body">Pero lo que la IA no puede hacer es <strong>decidir qué construir primero, qué dejar fuera, cómo ordenar el flujo de usuario</strong>, cómo hacer que el producto sea entendible desde el primer segundo, o cómo llegar a una primera versión funcional sin construir de más.</p>
+            <div class="ai-points">
+                <div class="ai-point">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M9 12l2 2 4-4" stroke="#00e0ff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><circle cx="12" cy="12" r="10" stroke="#00e0ff" stroke-width="1.5"/></svg>
+                    La IA genera código. El criterio de producto decide qué código vale la pena escribir.
+                </div>
+                <div class="ai-point">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M9 12l2 2 4-4" stroke="#00e0ff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><circle cx="12" cy="12" r="10" stroke="#00e0ff" stroke-width="1.5"/></svg>
+                    La IA puede acelerar el proceso. No puede reemplazar la experiencia construyendo MVPs reales.
+                </div>
+                <div class="ai-point">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M9 12l2 2 4-4" stroke="#00e0ff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><circle cx="12" cy="12" r="10" stroke="#00e0ff" stroke-width="1.5"/></svg>
+                    Yo uso IA como herramienta. Mi valor está en saber qué construir, en qué orden y para quién.
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ══════════════════════════════════════════ -->
+<!-- 9. TESTIMONIOS                            -->
+<!-- ══════════════════════════════════════════ -->
+<section class="testimonials">
+    <div class="testimonials-container">
+        <div class="testimonials-header">
+            <div class="testimonials-title">
+                <h2>Lo que dicen</h2>
+                <div class="subtitle">quienes ya trabajaron conmigo</div>
+            </div>
+            <div class="testimonials-nav">
+                <button class="testimonial-nav-btn prev" onclick="moveTestimonial(-1)">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M15 18L9 12L15 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </button>
+                <button class="testimonial-nav-btn next" onclick="moveTestimonial(1)">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M9 6L15 12L9 18" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </button>
+            </div>
+        </div>
+        <div class="testimonials-carousel">
+            <div class="testimonials-track">
+                <div class="testimonial-card">
+                    <div class="testimonial-quote">"</div>
+                    <div class="testimonial-text">
+                        <p>Necesitábamos modernizar la forma en que mostramos nuestros productos. Samuel diseñó y desarrolló Wibbux logrando una plataforma de catálogos interactivos que agilizó muchísimo nuestras ventas.</p>
+                    </div>
+                    <div class="testimonial-footer">
+                        <img src="assets/img/perfiles/hermin.jpg" alt="Herminson Ledezma" class="testimonial-avatar" style="width:48px;height:48px;border-radius:50%;object-fit:cover;">
+                        <div class="testimonial-info">
+                            <div class="testimonial-name">Herminson Ledezma</div>
+                            <div class="testimonial-role">Cliente · Wibbux</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-quote">"</div>
+                    <div class="testimonial-text">
+                        <p>El flujo de trabajo y la comunicación uno a uno con Samuel fueron claves. Entendió perfectamente el modelo B2B de BlueoPanama y entregó una tienda mayorista altamente funcional.</p>
+                    </div>
+                    <div class="testimonial-footer">
+                        <img src="assets/img/perfiles/alejandro.jpg" alt="Alejandro Valencia" class="testimonial-avatar" style="width:48px;height:48px;border-radius:50%;object-fit:cover;">
+                        <div class="testimonial-info">
+                            <div class="testimonial-name">Alejandro Valencia</div>
+                            <div class="testimonial-role">Founder · BlueoPanama</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-quote">"</div>
+                    <div class="testimonial-text">
+                        <p>Buscábamos automatizar las ventas por redes sociales. Samuel creó Wippy, una solución SaaS para WhatsApp que destaca por su diseño intuitivo y excelente rendimiento.</p>
+                    </div>
+                    <div class="testimonial-footer">
+                        <img src="assets/img/perfiles/david.jpg" alt="David Mendoza" class="testimonial-avatar" style="width:48px;height:48px;border-radius:50%;object-fit:cover;">
+                        <div class="testimonial-info">
+                            <div class="testimonial-name">David Mendoza</div>
+                            <div class="testimonial-role">Cliente · Wippy</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-quote">"</div>
+                    <div class="testimonial-text">
+                        <p>Trabajar con Samuel es garantía de calidad. Diseñó los flujos de inversión y seguridad de Bancuve combinando una visión estética con alta capacidad técnica para el sector FinTech.</p>
+                    </div>
+                    <div class="testimonial-footer">
+                        <img src="assets/img/perfiles/Juan.jpg" alt="Juan Cruz" class="testimonial-avatar" style="width:48px;height:48px;border-radius:50%;object-fit:cover;">
+                        <div class="testimonial-info">
+                            <div class="testimonial-name">Juan Cruz</div>
+                            <div class="testimonial-role">Socio · Bancuve</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="testimonials-dots">
+            <span class="dot active" onclick="currentTestimonial(0)"></span>
+            <span class="dot" onclick="currentTestimonial(1)"></span>
+            <span class="dot" onclick="currentTestimonial(2)"></span>
+            <span class="dot" onclick="currentTestimonial(3)"></span>
+        </div>
+    </div>
+</section>
+
+<!-- ══════════════════════════════════════════ -->
+<!-- 10. FAQ                                   -->
+<!-- ══════════════════════════════════════════ -->
+<section class="faq" id="faq">
+    <div class="faq-container">
+        <div class="faq-title">
+            <h2>Preguntas</h2>
+            <div class="subtitle">Frecuentes</div>
+        </div>
+        <div class="faq-grid">
+            <div class="faq-item">
+                <div class="faq-question">
+                    <h3>¿Necesito tener todo definido para empezar?</h3>
+                    <span class="faq-icon">+</span>
+                </div>
+                <div class="faq-answer">
+                    No. Muchos clientes llegan con una idea general, un proceso que quieren digitalizar o un problema sin solución clara todavía. El primer paso es el diagnóstico: ahí definimos juntos qué construir, en qué orden y cuál es la primera versión que tiene sentido.
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">
+                    <h3>¿Puedo hacer esto con IA yo mismo?</h3>
+                    <span class="faq-icon">+</span>
+                </div>
+                <div class="faq-answer">
+                    Sí, y la IA es una herramienta que yo mismo uso. Pero el valor no está en generar pantallas o código — está en saber qué construir, en qué orden y para quién. Eso requiere criterio de producto, experiencia con MVPs reales y alguien que haya cometido los errores antes.
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">
+                    <h3>¿Cuánto tarda desarrollar un MVP funcional?</h3>
+                    <span class="faq-icon">+</span>
+                </div>
+                <div class="faq-answer">
+                    Un MVP funcional (con login, base de datos y módulo principal) tarda entre 4 y 8 semanas según la complejidad. Trabajo con entregas semanales para que veas el avance en tiempo real, no al final.
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">
+                    <h3>¿Los precios son fijos o cambian según el proyecto?</h3>
+                    <span class="faq-icon">+</span>
+                </div>
+                <div class="faq-answer">
+                    Los precios mostrados son rangos de entrada. El costo final depende del alcance, número de módulos, integraciones con APIs externas y nivel de complejidad. Después del diagnóstico te presento una propuesta específica para tu caso.
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">
+                    <h3>¿Cómo se estructuran los pagos?</h3>
+                    <span class="faq-icon">+</span>
+                </div>
+                <div class="faq-answer">
+                    Por fases o sprints cerrados: generalmente 50% al inicio y 50% al entregar los hitos validados. Sin contratos a largo plazo ni sorpresas en el presupuesto. Cada sprint tiene entregables claros antes de comenzar.
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">
+                    <h3>¿La primera sesión tiene costo?</h3>
+                    <span class="faq-icon">+</span>
+                </div>
+                <div class="faq-answer">
+                    No. La primera conversación de diagnóstico es gratuita. Analizamos tu idea o proceso, te doy mi perspectiva de producto y definimos si soy la persona adecuada para tu proyecto. Sin presión.
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ══════════════════════════════════════════ -->
+<!-- 11. CTA FINAL: Específico y orientado     -->
+<!-- ══════════════════════════════════════════ -->
+<section class="cta-final">
+    <div class="cta-final-inner">
+        <p class="cta-final-eyebrow">¿Estás listo para dar el primer paso?</p>
+        <h2>¿Tienes una idea o proceso que quieres convertir en software?</h2>
+        <p>Cuéntame qué quieres construir y te digo qué primera versión tendría sentido desarrollar.</p>
+        <div class="cta-final-buttons">
+            <a href="<?php echo get_whatsapp_url('aterrizar'); ?>" class="btn btn-primary btn-lg">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                Aterrizar mi proyecto
+            </a>
+        </div>
+        <p class="cta-final-note">Primera conversación gratuita · Sin compromiso · Respondo en menos de 24h</p>
+    </div>
+</section>
+
+<!-- Floating Navigation Bar -->
+<nav class="floating-navbar">
+    <a href="#servicios" class="nav-item" data-section="servicios">
+        <span class="nav-dot"></span>
+        Proceso
+    </a>
+    <a href="#portfolio" class="nav-item" data-section="portfolio">
+        <span class="nav-dot"></span>
+        Proyectos
+    </a>
+    <a href="#faq" class="nav-item" data-section="faq">
+        <span class="nav-dot"></span>
+        Preguntas
+    </a>
+</nav>
+
+<?php include 'components/footer.php'; ?>
+<?php include 'components/scripts.php'; ?>
